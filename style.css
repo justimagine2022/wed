@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+/* common */
+body {
+  margin: 0;
+  background-color: #F0F0F0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 12px;
+}
+
+h2,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+
+.container {
+  margin: 0 16px;
+}
+
+/* header */
+
+header {
+  padding: 16px 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+nav {
+  font-size: 14px;
+}
+
+nav ul {
+  gap: 30px;
+}
+
+.flex-mobile {
+  display: flex;
+}
+
+.request {
+  padding: 31px 76px;
+  color: #ffffff;
+  background: #000000;
+  font-size: 12px;
+  display: none;
+}
+
+/* main */
+.mainvisual img {
+  height: 100vh;
+}
+
+.news {
+  /* sectionごとに上下マージンつけてみる */
+  margin: 80px 0 90px;
+}
+
+.sec-title-en {
+  font-size: 36px;
+  letter-spacing: 10.8px;
+}
+
+.sec-title-ja {
+  font-size: 14px;
+  margin: 10px 0 34px;
+  padding-bottom: 24px;
+  display: block;
+  position: relative;
+}
+
+/* 疑似要素で線を引く */
+.sec-title-ja::after {
+  content: '';
+  background-color: black;
+  width: 40px;
+  height: 1px;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+
+.news dt {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.news dd {
+  margin: 16px 0 40px;
+  font-size: 16px;
+}
+
+.news span {
+  display: inline-block;
+  background: #000000;
+  color: #F0F0F0;
+  font-size: 12px;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.about {
+  margin-bottom: 80px;
+}
+
+.about img {
+  margin-bottom: 30px;
+  height: 300px;
+}
+
+.business p {
+  margin: 34px 0 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+
+/* 疑似要素で線を引く */
+.business p::after {
+  content: '';
+  background-color: #000000;
+  width: 8px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.company {
+  margin: 80px 0 30px;
+}
+
+.company .bg {
+  padding: 40px 20px;
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+
+.company dl {
+  font-size: 14px;
+}
+
+.company dd {
+  padding: 5px 0 20px 14px;
+}
+
+.company dd:nth-last-of-type(-n+4) {
+  padding-bottom: 5px;
+}
+
+/* footer */
+footer {
+  padding: 20px 0;
+}
+
+footer img {
+  margin-bottom: 11px;
+  width: 80px;
+}
+
+footer .info {
+  margin-bottom: 40px;
+}
+
+footer small {
+  font-size: 12px;
+}
+
+/* large screen */
+@media (min-width: 900px) {
+  .container {
+    /* コンテンツ幅 */
+    max-width: 1000px;
+    /* 親要素いっぱいに広げる */
+    width: 100%;
+  }
+
+  header {
+    padding: 0;
+    display: flex;
+  }
+
+  header .container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner {
+    /* 要素を右に寄せたい時、左の余白をautoとする */
+    margin-left: auto;
+  }
+
+  .request {
+    display: block;
+  }
+
+  h1 {
+    margin-right: 60px;
+    margin-bottom: 0px;
+  }
+
+  .mainvisual img {
+    margin-top: 0;
+  }
+
+  .flex-item {
+    display: flex;
+  }
+
+  .news .container {
+    margin: 0 auto;
+  }
+
+  .news .item {
+    width: calc(100% / 3);
+  }
+
+  .about .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about img {
+    height: 400px;
+    width: 55%;
+    margin-bottom: 246px;
+  }
+
+  .about {
+    margin-bottom: 0;
+  }
+
+  .about .item {
+    height: 400px;
+    width: 35%;
+    margin: 0 auto;
+    align-self: end;
+  }
+
+  .about p {
+    line-height: 1.7;
+  }
+
+  .business .container {
+    margin: 0 auto;
+  }
+
+  .business .flex-item {
+    gap: 64px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .business .item1 {
+    margin-top: 80px;
+  }
+
+  .business p:first-child {
+    margin-top: 0;
+  }
+
+  .company {
+    margin: 120px 0 110px 0;
+  }
+
+  .company .container {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .company .bg {
+    width: 45%;
+    padding: 100px 62px;
+  }
+
+  .company img {
+    width: 55%;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+  }
+
+  /* flex-wrapにしてdtとddのwidthを指定 */
+  .company dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .company dt {
+    width: 20%;
+    margin-bottom: 10px;
+  }
+
+  #company dl dd {
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .company dd:nth-last-of-type(-n+3) {
+    margin-left: 20%;
+  }
+
+  footer {
+    background: #ffffff;
+    padding: 40px 0 20px;
+  }
+
+  footer .container {
+    margin: 0 auto;
+  }
+
+  footer .flex-item {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .info {
+    margin-bottom: 26px;
+  }
+
+
+
+
+
+}
